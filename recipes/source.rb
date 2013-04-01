@@ -43,8 +43,12 @@ else
   end
 end
 
-gem_package "passenger" do
+rbenv_gem "passenger" do
   version node['passenger']['version']
+
+  if node[:passenger][:rbenv_version]
+    rbenv_version node[:passenger][:rbenv_version]
+  end
 end
 
 execute "passenger_module" do
