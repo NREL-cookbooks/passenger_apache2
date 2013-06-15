@@ -6,7 +6,8 @@ default['passenger']['root_path']   = "#{languages['ruby']['gems_dir']}/gems/pas
 default['passenger']['module_path'] = "ext/apache2/mod_passenger.so"
 default['passenger']['manage_module_conf'] = true
 default['passenger']['package']['name'] = nil
-default['passenger']['package']['version'] = node['passenger']['version']
+# set package version to nil, the distro package may not be the same version
+default['passenger']['package']['version'] = nil
 
 # General
 default[:passenger][:spawn_method] = "smart-lv2"
