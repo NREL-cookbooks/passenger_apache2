@@ -34,7 +34,7 @@ Attributes
   Apache module config.
 * `node['passenger']['root_path']` - The location of the passenger gem.
 * `node['passenger']['module_path']` - The location of the compiled passenger
-  apache module.
+  apache module relative to the root_path
 * `node['passenger']['install_method']` - Includes the "source" (gem
   install) or "package" recipe. Default "source."
 * `node['passenger']['apache_mpm']` - Override with an

@@ -38,5 +38,5 @@ if(node['passenger']['manage_module_conf'])
 end
 
 apache_module 'passenger' do
-  module_path node['passenger']['module_path']
+  module_path "#{node['passenger']['root_path']}/#{node['passenger']['module_path']}"
 end
