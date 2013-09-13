@@ -6,7 +6,7 @@ PassengerUseGlobalQueue <%= if(node[:passenger][:user_switching]) then "on" else
 
 # Security
 PassengerUserSwitching <%= if(node[:passenger][:user_switching]) then "on" else "off" end %>
-PassengerUser <%= node[:apache][:user] %>
+PassengerDefaultUser <%= node[:apache][:user] %>
 <% if node[:passenger][:default_group] -%>
 PassengerDefaultGroup <%= node[:passenger][:default_group] %>
 <% end -%>
