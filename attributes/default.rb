@@ -8,6 +8,7 @@ default['passenger']['manage_module_conf'] = true
 default['passenger']['package']['name'] = nil
 # set package version to nil, the distro package may not be the same version
 default['passenger']['package']['version'] = nil
+default['passenger']['ruby_bin'] = languages['ruby']['ruby_bin']
 
 # General
 default[:passenger][:spawn_method] = "smart-lv2"
