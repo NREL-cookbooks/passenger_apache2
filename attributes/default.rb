@@ -26,6 +26,7 @@ default[:passenger][:min_instances] = 1
 default[:passenger][:max_instances_per_app] = 0
 default[:passenger][:pool_idle_time] = 300
 default[:passenger][:max_requests] = 0
+default[:passenger][:max_preloader_idle_time] = 300
 default[:passenger][:stat_throttle_rate] = 0
 default[:passenger][:pre_start_urls] = []
 default[:passenger][:high_performance] = false
