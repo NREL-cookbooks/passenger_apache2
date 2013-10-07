@@ -27,6 +27,12 @@ PassengerMaxRequests <%= node[:passenger][:max_requests] %>
 PassengerPreStart <%= url %>
 <% end -%>
 
+<% if(node[:passenger][:version] >= "4") -%>
+# Connecting handling
+PassengerBufferResponse <%= if(node[:passenger][:buffer_response]) then "on" else "off" end %>
+PassengerMaxRequestQueueSize <%= node[:passenger][:max_request_queue_size] %>
+<% end -%>
+
 # Logging and debugging
 PassengerLogLevel <%= node[:passenger][:log_level] %>
 <% if node[:passenger][:debug_log_file] -%>

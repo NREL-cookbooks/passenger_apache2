@@ -31,6 +31,10 @@ default[:passenger][:stat_throttle_rate] = 0
 default[:passenger][:pre_start_urls] = []
 default[:passenger][:high_performance] = false
 
+# Connecting handling
+default[:passenger][:buffer_response] = false
+default[:passenger][:max_request_queue_size] = 100
+
 # Compatibility
 default[:passenger][:resolve_symlinks_in_document_root] = false
 default[:passenger][:allow_encoded_slashes] = false
