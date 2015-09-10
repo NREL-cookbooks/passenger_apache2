@@ -25,7 +25,7 @@
 include_recipe 'apache2'
 
 # Allows proper default path if root path was overridden
-passenger_module_dir_name = node['passenger']['version'].start_with?('4') ? 'buildout' : 'ext'
+passenger_module_dir_name = node['passenger']['version'].start_with?('4', '5') ? 'buildout' : 'ext'
 node.default['passenger']['root_path']   = "#{node['languages']['ruby']['gems_dir']}/gems/passenger-#{node['passenger']['version']}"
 node.default['passenger']['module_path'] = "#{node['passenger']['root_path']}/#{passenger_module_dir_name}/apache2/mod_passenger.so"
 
